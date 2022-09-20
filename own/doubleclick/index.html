@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Double Click</title>
+    </head>
+    <body>
+        <button ondblclick="console.log('ondblclick')">Double Click with ondblclick</button>
+        <button onclick="dblclickFun()">Double Click with function</button>
+
+        <script type="text/javascript">
+            let firstClick = secondClick = 0;
+            function dblclickFun(){
+                if(firstClick === 0){
+                    firstClick = new Date().getTime();
+                }else{
+                    secondClick = Date.now();
+
+                    if(secondClick - firstClick <= 1000){
+                        firstClick = 0;
+                        console.log("function");
+                    }else{
+                        firstClick = Date.now();
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

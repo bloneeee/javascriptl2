@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background-color: #222;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    background-color: #f4f4f4;
+    color: #444;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.container #question{
+    text-align: center;
+}
+
+.container .row{
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(150px,200px);
+    grid-gap: 5px;
+}
+
+.container .form-label,
+.container .form-img{
+    width: 100%;
+    height: 100%;
+}
+
+.container .form-label{
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.container .form-control:checked + .form-label{
+    transform: scale(1.1);
+}
+
+.container .form-img{
+    object-fit: cover;
+}
+
+.container .form-label:hover .form-img{
+    opacity: 0.8;
+}
+
+.container .form-control{
+    display: none;
+}
+
+.container #show-result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container #show-result > span{
+    font-size: 20px;
+}
+
+.container #show-result .correct{
+    color: green;
+    margin-right: 5px;
+}
+
+.container #show-result .wrong{
+    color: red;
+    margin-left: 5px;
+}
+
+.container .btn-next{
+    background-color: seagreen;
+    color: #fff;
+    
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.container .btn-next:hover{
+    opacity: 0.8;
+}
